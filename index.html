@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos de Programación Funcional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <h1>Conceptos de Programación Funcional</h1>
+        <nav>
+            <ul>
+                <li><a href="#funcional" class="tablink active" onclick="openTab(event, 'funcional')">Programación Funcional</a></li>
+                <li><a href="#declarativa-imperativa" class="tablink" onclick="openTab(event, 'declarativa-imperativa')">Declarativa vs Imperativa</a></li>
+                <li><a href="#funcional-vs-oo" class="tablink" onclick="openTab(event, 'funcional-vs-oo')">Funcional vs OO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="funcional" class="tabcontent">
+                <h2>Introducción a la Programación Funcional</h2>
+                <p>
+                    La programación funcional es un paradigma que se centra en el uso de funciones matemáticas, evitando el estado mutable y los efectos secundarios. Los programas funcionales son más fáciles de probar y depurar debido a su naturaleza inmutable, que previene comportamientos impredecibles.
+                </p>
+                <h3>Características Clave:</h3>
+                <ul>
+                    <li><strong>Funciones Puras:</strong> Las funciones matemáticas puras no tienen efectos secundarios y siempre producen el mismo resultado para los mismos parámetros de entrada.</li>
+                    <li><strong>Inmutabilidad:</strong> Se evita el cambio de estado y el uso de variables globales, optando por variables locales y funciones recursivas.</li>
+                    <li><strong>Funciones de Orden Superior:</strong> Funciones como <code>map</code>, <code>filter</code>, y <code>reduce</code> permiten manipular datos de manera concisa.</li>
+                    <li><strong>Patrones de Diseño Funcional:</strong> Incluyen el patrón de función pura y el patrón de inmutabilidad para facilitar la comprensión y verificación del código.</li>
+                    <li><strong>Programación Lógica y Teoremas:</strong> Se utilizan para demostrar propiedades del programa y asegurar su corrección.</li>
+                </ul>
+                <img src="imagenes/programacionfuncional.png" alt="Programación Funcional">
+            </div>
+
+            <div id="declarativa-imperativa" class="tabcontent" style="display:none">
+                <h2>Programación Declarativa vs Imperativa</h2>
+                <p>La programación declarativa y la imperativa representan dos enfoques diferentes para escribir código. La programación declarativa se enfoca en el resultado que se desea alcanzar, especificando qué se debe hacer sin detallar el proceso. La programación imperativa, en cambio, se centra en el cómo hacer algo, describiendo los pasos necesarios para lograr el resultado.</p>
+                
+                <h3>Programación Declarativa</h3>
+                <ul>
+                    <li><strong>Enfoque:</strong> Se centra en el <em>qué</em> hacer, sin preocuparse por el <em>cómo</em> se hace.</li>
+                    <li><strong>Ejemplos:</strong> SQL, HTML, lenguajes funcionales.</li>
+                    <li><strong>Ventajas:</strong> Código más conciso y legible, menos propenso a errores de implementación.</li>
+                    <li><strong>Desventajas:</strong> Menos control sobre los detalles de la ejecución.</li>
+                </ul>
+
+                <h3>Programación Imperativa</h3>
+                <ul>
+                    <li><strong>Enfoque:</strong> Se centra en el <em>cómo</em> hacer algo, describiendo cada paso del proceso.</li>
+                    <li><strong>Ejemplos:</strong> C, Java, Python.</li>
+                    <li><strong>Ventajas:</strong> Mayor control sobre la ejecución, adecuado para problemas donde el proceso es importante.</li>
+                    <li><strong>Desventajas:</strong> Código más largo y complejo, mayor propensión a errores.</li>
+                </ul>
+
+                <h3>Comparación</h3>
+                <ul>
+                    <li><strong>Enfoque:</strong> La programación declarativa se enfoca en qué se quiere lograr, mientras que la imperativa se enfoca en cómo lograrlo.</li>
+                    <li><strong>Control:</strong> La programación imperativa ofrece más control sobre la ejecución, mientras que la declarativa simplifica el proceso.</li>
+                    <li><strong>Legibilidad:</strong> La programación declarativa tiende a ser más concisa y legible, mientras que la imperativa puede ser más detallada y extensa.</li>
+                </ul>
+                <img src="imagenes/programaciondeclarativa.png" alt="Declarativa vs Imperativa">
+            </div>
+
+            <div id="funcional-vs-oo" class="tabcontent" style="display:none">
+                <h2>Programación Funcional vs Programación Orientada a Objetos</h2>
+                <p>La programación funcional y la programación orientada a objetos representan dos enfoques distintos para resolver problemas y estructurar el código. La programación funcional se enfoca en el uso de funciones puras y evita el estado mutable, mientras que la programación orientada a objetos organiza el código en torno a objetos que combinan datos y comportamientos.</p>
+                <h3>Programación Funcional</h3>
+                <ul>
+                    <li><strong>Funciones Puras:</strong> No tienen efectos secundarios y siempre producen el mismo resultado para las mismas entradas.</li>
+                    <li><strong>Inmutabilidad:</strong> Los datos son inmutables y se crean nuevos datos en lugar de modificar los existentes.</li>
+                    <li><strong>Funciones de Orden Superior:</strong> Permite el uso de funciones como argumentos o resultados de otras funciones.</li>
+                </ul>
+                <h3>Programación Orientada a Objetos</h3>
+                <ul>
+                    <li><strong>Encapsulamiento:</strong> Agrupa datos y comportamientos en clases, ocultando la implementación.</li>
+                    <li><strong>Herencia:</strong> Permite crear nuevas clases basadas en clases existentes.</li>
+                    <li><strong>Polimorfismo:</strong> Permite que objetos de diferentes clases sean tratados de manera uniforme.</li>
+                </ul>
+                <h3>Comparación</h3>
+                <ul>
+                    <li><strong>Estado:</strong> La programación funcional evita el estado mutable, mientras que la POO permite el estado mutable en los objetos.</li>
+                    <li><strong>Reutilización:</strong> En POO se utiliza herencia y composición de objetos, mientras que en programación funcional se reutilizan funciones.</li>
+                    <li><strong>Modularidad:</strong> La POO usa clases y objetos para modularizar el código, mientras que la programación funcional usa funciones y módulos.</li>
+                </ul>
+                <img src="imagenes/programacionorientada.png" alt="Funcional vs OO">
+            </div>
+        </div>
+    </main>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";  
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";  
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
